@@ -9,16 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        Offer(title: "Offer 1", description: "Description 1")
     }
 }
 
+//struct Greeting: View {
+//    @State var name = ""
+//    
+//    var body: some View {
+//            VStack {
+//                TextField("Enter your name", text: $name)
+//                Text("Hello \(name)")
+//            }
+//    }
+//}
+
 #Preview {
-    ContentView()
+    Group {
+        ContentView()
+        ContentView().previewDevice("iPhone SE (2nd generation)")
+    }
 }
